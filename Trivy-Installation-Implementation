@@ -13,14 +13,18 @@ sudo apt-get install trivy
 
 ---COMMANDS---
 
-trivy image imagename
+trivy image imagename( example: trivy image nginx)
 
 trivy fs --security-checks vuln,config   Folder_name_OR_Path
 
 trivy image --severity HIGH,CRITICAL image_name
 
-trivy image -f json -o results.json image_name
+trivy image -f json -o results.json image_name (example:trivy image -f json -o results.json nginx) ###it will create output in json format file which is result.json
+
+json -format and output should be in the json format
+-f -format
+-o -output
 
 trivy repo repo-url
 
-trivy k8s --report summary cluster
+trivy k8s --report summary cluster 
